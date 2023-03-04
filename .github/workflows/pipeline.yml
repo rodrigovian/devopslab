@@ -25,6 +25,7 @@ jobs:
       - name: Unit Test
         run: python -m unittest -v test
 
+      # Aula 3
       - name: Docker Login
         run: | 
           echo '${{ secrets.GOOGLE_CREDENTIALS }}' > key.json
@@ -59,3 +60,4 @@ jobs:
             --allow-unauthenticated \
             --project ${{ vars.GOOGLE_PROJECT_ID }} \
             --format json
+
